@@ -1,0 +1,26 @@
+<html>
+    <head><title></title></head>
+    <body>
+        <form action="" method="post">
+            <label for="">enter name</label>
+            <input type="text" name="tana">
+            <input type="submit" value="check" onclick="checkisempty()">
+        </form>
+     <script>
+        function checkisempty()
+         {
+            var e;
+            e=document.getElementsByName("tana");
+            if (e.value==null || e.value==undefined || e.value.trim()=="")
+            {
+                alert("it is empty")   ;     
+            }
+            else 
+            {
+                alert("it is not empty")  ;
+            }
+            
+        }
+     </script>
+    </body>
+</html>

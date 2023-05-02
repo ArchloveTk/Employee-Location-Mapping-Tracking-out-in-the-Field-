@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    <style> 
+body
+{
+    background: local;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px;
+    outline: none;
+    background: turquoise;
+}
+
+.Q
+{
+
+padding: 30px;
+margin: 20px;
+
+}
+.hero
+{
+   height: 100%; 
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(911.jpg);
+   background-position: center;
+   background-size: cover;
+   position: absolute;
+}
+
+
+
+    </style>
+    <div class="hero"></div>
+
+<div  class="hero">
+    <table border="" align="center">
+<marquee dir="up">
+   <h1 >Enter ID number to view location</h1>
+</marquee>
+
+       <form class="Q" method="post">
+           <tr>
+       <td>
+          
+           ID : <input type="text" class="input-field" name="username" required> <br>
+          
+                    <input type="submit" name="save" value="showPosition" onclick="showPosition(position)">
+   </td></tr>
+       </form>
+  
+   </table> 
+   <a href="HRform.html">HOME PAGE</a>
+</div>
+
+</body>
+
+</html>

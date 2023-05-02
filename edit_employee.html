@@ -1,0 +1,108 @@
+
+<html><head><title></title></head>
+<body >
+  
+    <style>
+ body{
+ background: local;
+
+        }
+ h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    background-color: aqua;
+}
+.Q{
+
+ padding: 20px;
+ margin: 30px;
+ background-color: aqua;
+}
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px;
+    outline: none;
+    background: turquoise;
+}
+.hero
+{
+   height: 100%; 
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(911.jpg);
+   background-position: center;
+   background-size: cover;
+   position: absolute;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+    </style>
+   <div  class="hero">
+     <table border="" align="center">
+
+<marquee behavior="" direction="UP"> 
+    <h1 >CHANGE EMPLOYEE PASSWORD</h1>
+</marquee>
+   
+
+
+        <form class="Q" action="change-p.php" method="post">
+            <tr>
+        <td>
+            <?php if (isset($_GET['error'])) { ?>
+                <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+   
+            <?php if (isset($_GET['success'])) { ?>
+               <p class="success"><?php echo $_GET['success']; ?></p>
+           <?php } ?>
+           <label>ID</label>
+            <input type="password" 
+                   name="id" 
+                   class="input-field"
+                   placeholder="Old Password">
+                   <br>
+   
+            <label>Old Password</label>
+            <input type="password" 
+                   name="op" 
+                   class="input-field"
+                   placeholder="Old Password">
+                   <br>
+   
+            <label>New Password</label>
+            <input type="password" 
+                   name="np" 
+                   class="input-field"
+                   placeholder="New Password">
+                   <br>
+   
+            <label>Confirm New Password</label>
+            <input type="password" 
+                   name="c_np" 
+                   class="input-field"
+                   placeholder="Confirm New Password">
+                   <br>
+   
+            <button type="submit">CHANGE</button>
+    </td></tr>
+        </form>
+   <a href="HRform.html">HOME PAGE</a>
+    </table>
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html><head><title></title></head>
+<body >
+  
+    <style>
+ body{
+ background: local;
+
+        }
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    background-color: aqua;
+}
+.Q{
+
+ padding: 20px;
+ margin: 30px;
+ background-color: aqua;
+}
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px;
+    outline: none;
+    background: turquoise;
+}
+.hero
+{
+   height: 100%; 
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(911.jpg);
+   background-position: center;
+   background-size: cover;
+   position: absolute;
+}
+    </style>
+   <div  class="hero">
+     <table border="" align="center">
+
+<marquee direction="up" >
+    <h1 >ADD NEW EMPLOYEE</h1>
+</marquee>
+
+        <form class="Q" action="addto_database.php" method="post">
+            <tr>
+        <td>
+            id   : <input type="text" class="input-field" name="id"  required><br>
+            name   :  <input   type="text" class="input-field" name="fname"  required> <br>
+            surname: <input type="text"  class="input-field" name="surname" required> <br>
+            email: <input type="email" class="input-field" name="email" required><br>
+            username : <input type="text" class="input-field" name="username" required> <br>
+            password: <input type="password" class="input-field" name="password" required><br>
+                     <input type="submit" name="save" value="save">
+    </td></tr>
+        </form>
+        <a href="HRform.html">HOME PAGE</a>
+    </table> 
+</div>
+
+   
+</body>
+</html>

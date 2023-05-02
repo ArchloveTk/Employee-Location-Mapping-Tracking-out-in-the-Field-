@@ -1,0 +1,125 @@
+
+
+
+
+
+<html>
+    <head><title></title></head>
+    <body>
+      
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+body
+{
+    background: local;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px;
+    outline: none;
+    background: turquoise;
+}
+
+.Q
+{
+
+padding: 30px;
+margin: 20px;
+
+}
+.hero
+{
+   height: 100%; 
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(911.jpg);
+   background-position: center;
+   background-size: cover;
+   position: absolute;
+}
+#dayCount {
+      margin-top: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 12px;
+  }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <h1>PAYROLL</h1>
+
+<body>
+    <div class="hero">
+      <form class="Q" action="payroll.php" method="post">
+
+        <label>ID Number:</label>
+        <input type="text" id="id" name="id" class="input-field">
+        <br>
+
+        <label>Start Date:</label>
+        <input type="date" id="firstDate" class="input-field">
+        <br>
+        <label>End Date:</label>
+        <input type="date" id="secondDate" class="input-field">
+        <br>
+        <label>Pay per Day:</label>
+        <input type="number" id="pay" class="input-field">
+        <br>
+        <button type="button" name="bt" onclick="X()">Calculate Pay</button>
+      </form>
+      
+      <div id="dayCount"></div>
+    </div>
+    
+    
+      <script>
+        function X() {
+         name ='<? $row["name"]?>';
+
+          const firstDate = document.getElementById('firstDate').value; // variable names for date
+          const secondDate = document.getElementById('secondDate').value;
+      
+          
+          const startTimestamp = new Date(firstDate).getTime();
+          const endTimestamp = new Date(secondDate).getTime();
+      
+          
+          const difference = endTimestamp - startTimestamp; // differeciation between two daes
+      
+          
+          const differenceInDays = Math.round(difference / (1000 * 60 * 60 * 24));
+          if (startTimestamp>endTimestamp)
+     {
+      document.writeln("Error !!!! wrong date format used (startdate should not be less than end date)")
+    } else {
+      
+        
+          var num = document.getElementById('pay').value
+          const dayCountElement = document.getElementById('dayCount');
+          dayCountElement.innerHTML = "  the total pay for :"+name+" is $ : " +differenceInDays * num ;
+
+        }
+      }
+      </script>
+      
+      
+</body>
+</html>
+

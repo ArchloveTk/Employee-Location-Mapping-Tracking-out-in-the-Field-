@@ -1,0 +1,62 @@
+
+<html><head><title></title></head>
+<body >
+  
+    <style>
+ body{
+ background: local;
+
+        }
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Q{
+
+ padding: 20px;
+ margin: 30px;
+ background-color: aqua;
+}
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px;
+    outline: none;
+    background: turquoise;
+}
+.hero
+{
+   height: 100%; 
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(911.jpg);
+   background-position: center;
+   background-size: cover;
+   position: absolute;
+}
+    </style>
+   <div  class="hero">
+     <table border="" align="center">
+
+    <h1 >SIGN UP TO LOGIN</h1>
+
+
+        <form class="Q" action="updateinfo.php" method="post">
+            <tr>
+        <td>
+           
+            username : <input type="text" class="input-field" name="username" required> <br>
+            password: <input type="password" class="input-field" name="password" required><br>
+                     <input type="submit" name="save" value="save">
+    </td></tr>
+        </form>
+   
+    </table> 
+</div>
+
+   
+</body>
+</html>
